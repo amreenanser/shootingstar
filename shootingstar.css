@@ -1,0 +1,31 @@
+
+  body{
+    margin:0;
+    background:#001a33; /* dark blue night sky */
+    height:100vh;
+    overflow:hidden;
+  }
+
+  /* Bigger shooting star */
+  .star{
+    width:15px;       /* bigger size */
+    height:15px;      /* bigger size */
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:80px;
+    left:-30px;
+    animation:shoot 2s linear infinite;
+  }
+
+  /* Simple movement using translateX + translateY */
+  @keyframes shoot {
+    0%{
+      transform:translateX(0) translateY(0);
+      opacity:1;
+    }
+    100%{
+      transform:translateX(900px) translateY(250px);
+      opacity:0;
+    }
+  }
